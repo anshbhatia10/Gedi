@@ -1,0 +1,43 @@
+import { ExpoConfig, ConfigContext } from 'expo/config';
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+  ...config,
+  name: "Gedi",
+  slug: "gedi",
+  scheme: "gedi",
+  version: "0.1.0",
+  orientation: "portrait",
+  userInterfaceStyle: "dark",
+  assetBundlePatterns: [
+    "**/*"
+  ],
+  ios: {
+    supportsTablet: false,
+    infoPlist: {
+      "NSLocationWhenInUseUsageDescription": "Gedi needs your location to record drives.",
+      "NSContactsUsageDescription": "Gedi uses contacts to find friends.",
+      "NSPhotoLibraryUsageDescription": "Gedi lets you attach photos to drives.",
+      "NSCameraUsageDescription": "Gedi lets you take a photo after a drive."
+    }
+  },
+  android: {
+    package: "com.gedi.app",
+    permissions: [
+      "ACCESS_FINE_LOCATION",
+      "ACCESS_COARSE_LOCATION",
+      "READ_CONTACTS",
+      "CAMERA"
+    ],
+    config: {
+      googleMaps: {
+        apiKey: process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY
+      }
+    }
+  },
+  extra: {
+    eas: {
+      projectId: "2f7292f1-5855-43af-945a-5ac6e7ac4d35"
+    }
+  },
+  owner: "anshbhatia"
+});
