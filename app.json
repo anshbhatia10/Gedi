@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Gedi",
+    "slug": "gedi",
+    "scheme": "gedi",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Gedi needs your location to record drives.",
+        "NSContactsUsageDescription": "Gedi uses contacts to find friends.",
+        "NSPhotoLibraryUsageDescription": "Gedi lets you attach photos to drives.",
+        "NSCameraUsageDescription": "Gedi lets you take a photo after a drive."
+      }
+    },
+    "android": {
+      "package": "com.gedi.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_CONTACTS",
+        "CAMERA"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  }
+}
