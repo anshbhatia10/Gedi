@@ -25,12 +25,18 @@
         "ACCESS_COARSE_LOCATION",
         "READ_CONTACTS",
         "CAMERA"
-      ]
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBNBihT416IoWMYtmllSXynJLDZAlyRxqE"
+        }
+      }
     },
     "extra": {
       "eas": {
-        "projectId": "00000000-0000-0000-0000-000000000000"
+        "projectId": "2f7292f1-5855-43af-945a-5ac6e7ac4d35"
       }
-    }
+    },
+    "owner": "anshbhatia"
   }
 }
